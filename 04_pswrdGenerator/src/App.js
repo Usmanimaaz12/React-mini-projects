@@ -1,7 +1,24 @@
+
+
 import { useCallback, useEffect, useState } from 'react';
 import React from 'react';
 import './App.css';
 import { useRef } from 'react';
+
+{/*
+NOTES:-
+1. useCallback is used for performance optimization. It will prevent the function from being created every time the component is rendered. It will only create the function when the dependencies change.
+The dependencies tell the function on what variables it depends on. If the dependencies don't change, the function will not be created again.
+
+2. useRef is used to create a reference to an element. It is similar to the ref attribute in class components. It can be used to access the DOM element.
+
+3. useEffect is used to run the function based on the dependencies. If the dependencies change, the function will run again. If the dependencies don't change, the function will not run again.
+There are three cases :
+a) useEffect(fn) : If there are no dependencies, the effect will run after the first render and after every render.
+b) useEffect(fn , [d1,d2,...]) : If there are dependencies, the function will run after the first render and after every render when the dependencies change.
+c) useEffect(fn , []) : If the dependencies are an empty array, the effect should only run once
+
+*/}
 
 function App() {
     

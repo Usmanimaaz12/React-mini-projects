@@ -1,3 +1,9 @@
+// Given below is a react element.
+// This is how the react sees the element returned by the other components.
+// example: function App() 
+//              { 
+                // return <a target="_blank" href="https://www.google.com">Click me to go to google</a>
+            //  }
 const reactElement = {  
     type: 'a',   // type of the element
     props: {    // properties of the element
