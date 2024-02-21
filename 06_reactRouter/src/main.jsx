@@ -12,6 +12,9 @@ import { Route } from 'react-router-dom'
 
 import User from './components/User/User.jsx'
 
+// Two methods to make the router
+// 1. Using createBrowserRouter  : array of objects with path and element
+// 2. Using createRoutesFromElements : JSX elements
 // const router = createBrowserRouter(
 //   [
 //     {
@@ -47,9 +50,9 @@ const router = createBrowserRouter(
       <Route path='' element={<Home />} />
       <Route path='about' element={<About />} />
       <Route path='contact' element={<Contact />} />
-      <Route path='user/:userid' element={<User />} />
+      <Route path='user/:userid' element={<User />} />  {/* we will get the access of userid in <User/> component*/}
       <Route 
-      loader={githubInfoLoader}
+      loader={githubInfoLoader} // gives optimized way to fetch data before rendering the component
       path='github' 
       element={<Github />}
        />
@@ -63,6 +66,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    {/* Instead of writing here <App/> , as we are using React router we have to write the below element. 
+    It takes a prop as router */}
     <RouterProvider router={router}/>
   </React.StrictMode>,
 )
