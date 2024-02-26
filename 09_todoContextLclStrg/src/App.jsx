@@ -8,7 +8,7 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   const addTodo = (todo) => {
-    setTodos((prev) => [{ id: Date.now(), ...todo }, ...prev]);
+    setTodos((prev) => [{ id: Date.now(), ...todo }, ...prev]); // take all prev todos , add new and copy by destructuring
   };
 
   const updateTodo = (id, todo) => {
@@ -18,7 +18,7 @@ function App() {
   };
 
   const deleteTodo = (id) => {
-    setTodos((prev) => prev.filter((todo) => todo.id !== id));
+    setTodos((prev) => prev.filter((todo) => todo.id !== id)); // if true then keep the todo
   };
 
   const toggleComplete = (id) => {
